@@ -318,6 +318,7 @@ textarea.input { resize: vertical; min-height: 100px; }
 
 /* Stats grid */
 .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.quick-actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .stat-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -332,12 +333,41 @@ textarea.input { resize: vertical; min-height: 100px; }
 
 /* Mobile first — stack on small, side-by-side desktop */
 @media (min-width: 768px) {
-  .screen, .screen-centered {
+  body:not(.desktop-mode) .screen, body:not(.desktop-mode) .screen-centered {
     max-width: 480px;
     margin: 0 auto;
     box-shadow: var(--shadow);
   }
-  .bottom-nav { max-width: 480px; left: 50%; transform: translateX(-50%); }
+  body:not(.desktop-mode) .bottom-nav { max-width: 480px; left: 50%; transform: translateX(-50%); }
+}
+
+/* Desktop Mode Specific Enhancements */
+body.desktop-mode .screen { padding: 20px 40px; }
+body.desktop-mode .screen-centered { padding: 40px; }
+body.desktop-mode .bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  max-width: none;
+  transform: none;
+  padding: 16px 40px;
+  justify-content: center;
+  gap: 80px;
+}
+body.desktop-mode .bottom-nav-item {
+  flex: none;
+  font-size: 13px;
+  gap: 8px;
+}
+body.desktop-mode .bottom-nav-item svg { width: 28px; height: 28px; }
+
+body.desktop-mode .stats-grid, body.desktop-mode .quick-actions-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+body.desktop-mode .page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Toast */

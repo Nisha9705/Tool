@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import AIChatBot from './components/AIChatBot';
 
@@ -116,10 +117,54 @@ function AppRoutes() {
 }
 
 export default function App() {
+  const [viewMode, setViewMode] = useState('phone'); // phone | desktop
+
+  useEffect(() => {
+    if (viewMode === 'desktop') {
+      document.body.classList.add('desktop-mode');
+    } else {
+      document.body.classList.remove('desktop-mode');
+    }
+  }, [viewMode]);
+
   return (
     <AppProvider>
       <AppRoutes />
       <AIChatBot />
+      
+      {/* Real-time View Mode Toggle */}
+      <div style={{
+        position: 'fixed', top: 20, right: 20, zIndex: 9999,
+        background: 'var(--glass)', backdropFilter: 'blur(10px)',
+        border: '1px solid var(--border)', borderRadius: '99px',
+        padding: '6px', display: 'flex', gap: '6px',
+        boxShadow: 'var(--shadow)'
+      }}>
+        <button
+          onClick={() => setViewMode('phone')}
+          style={{
+            padding: '8px 16px', borderRadius: '99px', border: 'none',
+            background: viewMode === 'phone' ? 'var(--primary)' : 'transparent',
+            color: viewMode === 'phone' ? '#fff' : 'var(--text-muted)',
+            fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s', fontSize: '13px',
+            display: 'flex', alignItems: 'center', gap: '6px'
+          }}
+        >
+          📱 App
+        </button>
+        <button
+          onClick={() => setViewMode('desktop')}
+          style={{
+            padding: '8px 16px', borderRadius: '99px', border: 'none',
+            background: viewMode === 'desktop' ? 'var(--primary)' : 'transparent',
+            color: viewMode === 'desktop' ? '#fff' : 'var(--text-muted)',
+            fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s', fontSize: '13px',
+            display: 'flex', alignItems: 'center', gap: '6px'
+          }}
+        >
+          💻 Desktop
+        </button>
+      </div>
     </AppProvider>
   );
 }

@@ -62,7 +62,7 @@ export default function DashboardScreen() {
 
         {/* Quick actions */}
         <h2 style={{ fontSize: 16, fontWeight: 700, marginBottom: 12, color: '#9BA3C7', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Quick Actions</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 24 }}>
+        <div className="quick-actions-grid" style={{ marginBottom: 24 }}>
           {quickActions.map(a => (
             <button key={a.label} onClick={a.action} className="card" style={{
               cursor: 'pointer', border: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: '20px 16px',
