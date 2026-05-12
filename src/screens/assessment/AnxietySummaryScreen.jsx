@@ -6,7 +6,7 @@ const SESS_KEY = 'assessment_answers';
 
 function calcAnxiety(answers) {
   const total = answers.reduce((s, v) => s + v, 0);
-  return Math.round((total / (5 * 5)) * 100);
+  return Math.round((total / (answers.length * 5)) * 100);
 }
 
 function getAnxietyLabel(score) {
@@ -22,7 +22,7 @@ export default function AnxietySummaryScreen() {
 
   useEffect(() => {
     const saved = JSON.parse(sessionStorage.getItem(SESS_KEY) || '[]');
-    if (saved.length < 5) { navigate(`/patients/${id}/assessment/q/1`); return; }
+    if (saved.length < 3) { navigate(`/patients/${id}/assessment/q/1`); return; }
     setAnswers(saved);
   }, []);
 
@@ -31,7 +31,7 @@ export default function AnxietySummaryScreen() {
   const score = calcAnxiety(answers);
   const info = getAnxietyLabel(score);
 
-  const qLabels = ['Fear of Dentist', 'Reaction to Tools', 'Past Experience', 'Pain Expectation', 'General Anxiety'];
+  const qLabels = ['Fear of Dentist', 'Reaction to Tools', 'Past Experience'];
 
   return (
     <div className="screen" style={{ overflowY: 'auto' }}>
