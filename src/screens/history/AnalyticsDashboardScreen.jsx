@@ -3,6 +3,12 @@ import { useApp } from '../../context/AppContext';
 import BottomNav from '../../components/BottomNav';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
+const CustomTooltip = ({ active, payload }) => active && payload?.length ? (
+  <div style={{ background: '#1E2035', border: '1px solid rgba(108,99,255,0.3)', borderRadius: 8, padding: '8px 12px', fontSize: 12 }}>
+    {payload.map(p => <div key={p.name} style={{ color: p.fill || p.color }}>{p.name}: {p.value}</div>)}
+  </div>
+) : null;
+
 export default function AnalyticsDashboardScreen() {
   const navigate = useNavigate();
   const { getAllAssessments, getPatients } = useApp();
@@ -30,11 +36,6 @@ export default function AnalyticsDashboardScreen() {
 
   const avgAnxiety = assessments.length ? Math.round(assessments.reduce((s, a) => s + a.anxietyScore, 0) / assessments.length) : 0;
 
-  const CustomTooltip = ({ active, payload }) => active && payload?.length ? (
-    <div style={{ background: '#1E2035', border: '1px solid rgba(108,99,255,0.3)', borderRadius: 8, padding: '8px 12px', fontSize: 12 }}>
-      {payload.map(p => <div key={p.name} style={{ color: p.fill || p.color }}>{p.name}: {p.value}</div>)}
-    </div>
-  ) : null;
 
   return (
     <div className="screen">

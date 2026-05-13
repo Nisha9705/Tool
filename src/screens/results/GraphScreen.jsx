@@ -2,6 +2,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis, Legend } from 'recharts';
 
+const CustomTooltip = ({ active, payload, label }) => active && payload ? (
+  <div style={{ background: '#1E2035', border: '1px solid rgba(108,99,255,0.3)', borderRadius: 8, padding: '8px 12px', fontSize: 12 }}>
+    <div style={{ color: '#F0F2FF', fontWeight: 700 }}>{label}</div>
+    {payload.map(p => <div key={p.dataKey} style={{ color: p.color }}>{p.name}: {p.value}%</div>)}
+  </div>
+) : null;
+
 export default function GraphScreen() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -29,12 +36,6 @@ export default function GraphScreen() {
     cooperation: a2.cooperationLevel === 'High' ? 80 : a2.cooperationLevel === 'Moderate' ? 50 : 20,
   }));
 
-  const CustomTooltip = ({ active, payload, label }) => active && payload ? (
-    <div style={{ background: '#1E2035', border: '1px solid rgba(108,99,255,0.3)', borderRadius: 8, padding: '8px 12px', fontSize: 12 }}>
-      <div style={{ color: '#F0F2FF', fontWeight: 700 }}>{label}</div>
-      {payload.map(p => <div key={p.dataKey} style={{ color: p.color }}>{p.name}: {p.value}%</div>)}
-    </div>
-  ) : null;
 
   return (
     <div className="screen" style={{ overflowY: 'auto' }}>
