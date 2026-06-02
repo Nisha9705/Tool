@@ -12,7 +12,7 @@ export default function InstructionsScreen() {
         <div style={{ textAlign: 'center', marginBottom: 28 }}>
           <div style={{ fontSize: 64, marginBottom: 12 }}>📝</div>
           <h1 style={{ fontSize: 24, fontWeight: 800 }}>Instructions</h1>
-          <p style={{ color: '#9BA3C7', fontSize: 14, marginTop: 8, lineHeight: 1.7 }}>
+          <p style={{ color: '#9E857E', fontSize: 14, marginTop: 8, lineHeight: 1.7 }}>
             Please explain the following to the child before starting:
           </p>
         </div>
@@ -27,13 +27,13 @@ export default function InstructionsScreen() {
             <div key={step.n} className="card" style={{ display: 'flex', gap: 14, alignItems: 'flex-start', padding: '14px 16px' }}>
               <div style={{
                 width: 32, height: 32, borderRadius: '50%',
-                background: 'linear-gradient(135deg, #6C63FF, #43E8D8)',
+                background: 'linear-gradient(135deg, #F43F5E, #F59E0B)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: 14, fontWeight: 800, flexShrink: 0, color: '#fff',
               }}>{step.n}</div>
               <div>
                 <span style={{ fontSize: 18, marginRight: 8 }}>{step.icon}</span>
-                <span style={{ color: '#9BA3C7', fontSize: 14, lineHeight: 1.6 }}>{step.text}</span>
+                <span style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.6 }}>{step.text}</span>
               </div>
             </div>
           ))}

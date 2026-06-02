@@ -9,14 +9,14 @@ export default function DashboardScreen() {
   const assessments = getAllAssessments();
 
   const stats = [
-    { label: 'Patients', value: patients.length, icon: '👧', color: '#1A6FE8' },
+    { label: 'Patients', value: patients.length, icon: '👧', color: '#F43F5E' },
     { label: 'Assessments', value: assessments.length, icon: '📋', color: '#0CC8C8' },
     { label: 'High Risk', value: assessments.filter(a => a.riskLevel === 'High').length, icon: '⚠️', color: '#EF4444' },
     { label: 'Low Risk', value: assessments.filter(a => a.riskLevel === 'Low').length, icon: '✅', color: '#10B981' },
   ];
 
   const quickActions = [
-    { icon: '➕', label: 'Add Patient', action: () => navigate('/patients/add'), color: '#1A6FE8' },
+    { icon: '➕', label: 'Add Patient', action: () => navigate('/patients/add'), color: '#F43F5E' },
     { icon: '📋', label: 'Patients',   action: () => navigate('/patients'),     color: '#0CC8C8' },
     { icon: '📊', label: 'Analytics',  action: () => navigate('/analytics'),    color: '#6366F1' },
     { icon: '🕒', label: 'History',    action: () => navigate('/history'),      color: '#F59E0B' },

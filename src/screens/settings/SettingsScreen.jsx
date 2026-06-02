@@ -67,7 +67,7 @@ export default function SettingsScreen() {
                 onMouseOut={e => e.currentTarget.style.background = 'none'}>
                   <span style={{ fontSize: 20 }}>{item.icon}</span>
                   <span style={{ flex: 1, fontWeight: 600, fontSize: 15 }}>{item.label}</span>
-                  {item.toggle && <div style={{ width: 44, height: 24, background: item.value ? '#1A6FE8' : '#C8D4E8', borderRadius: 99, position: 'relative', transition: 'all 0.2s' }}><div style={{ position: 'absolute', width: 18, height: 18, background: '#fff', borderRadius: '50%', top: 3, left: item.value ? 23 : 3, transition: 'all 0.2s' }} /></div>}
+                  {item.toggle && <div style={{ width: 44, height: 24, background: item.value ? '#F43F5E' : '#E3D3C4', borderRadius: 99, position: 'relative', transition: 'all 0.2s' }}><div style={{ position: 'absolute', width: 18, height: 18, background: '#fff', borderRadius: '50%', top: 3, left: item.value ? 23 : 3, transition: 'all 0.2s' }} /></div>}
                   {item.value && !item.toggle && <span style={{ color: 'var(--text-muted)', fontSize: 13 }}>{item.value}</span>}
                   {item.arrow && <span style={{ color: 'var(--text-muted)' }}>›</span>}
                 </button>

@@ -1,4 +1,5 @@
 {
+  "name": "pedipredict-ai",
   "rewrites": [
     {
       "source": "/(.*)",

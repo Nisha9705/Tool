@@ -36,7 +36,7 @@ export default function AddPatientScreen() {
           <div style={{ textAlign: 'center', padding: '20px 0 28px' }}>
             <div style={{ fontSize: 56, marginBottom: 8 }}>👶</div>
             <h2 style={{ fontSize: 20, fontWeight: 800 }}>New Patient</h2>
-            <p style={{ color: '#9BA3C7', fontSize: 14 }}>Enter the child's details below</p>
+            <p style={{ color: '#9E857E', fontSize: 14 }}>Enter the child's details below</p>
           </div>
 
           <form onSubmit={submit}>

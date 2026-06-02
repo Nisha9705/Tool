@@ -27,12 +27,12 @@ export default function PatientListScreen() {
             onChange={e => setSearch(e.target.value)} style={{ paddingLeft: 42 }} />
         </div>
 
-        <div style={{ color: '#5A6080', fontSize: 13, fontWeight: 600, marginBottom: 10 }}>
+        <div style={{ color: '#6B554F', fontSize: 13, fontWeight: 600, marginBottom: 10 }}>
           {patients.length} patient{patients.length !== 1 ? 's' : ''}
         </div>
 
         {patients.length === 0 ? (
-          <div className="card" style={{ textAlign: 'center', padding: 40, color: '#5A6080' }}>
+          <div className="card" style={{ textAlign: 'center', padding: 40, color: '#6B554F' }}>
             <div style={{ fontSize: 50, marginBottom: 12 }}>👶</div>
             <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
               {search ? 'No patients match your search' : 'No patients yet'}
@@ -45,10 +45,10 @@ export default function PatientListScreen() {
               <div className="avatar">{p.name[0]}</div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: 700 }}>{p.name}</div>
-                <div style={{ color: '#9BA3C7', fontSize: 13 }}>{p.age} yrs · {p.gender}</div>
-                <div style={{ color: '#5A6080', fontSize: 12 }}>Added {p.createdAt}</div>
+                <div style={{ color: '#9E857E', fontSize: 13 }}>{p.age} yrs · {p.gender}</div>
+                <div style={{ color: '#6B554F', fontSize: 12 }}>Added {p.createdAt}</div>
               </div>
-              <span style={{ color: '#6C63FF', fontSize: 18 }}>›</span>
+              <span style={{ color: '#F43F5E', fontSize: 18 }}>›</span>
             </div>
           ))
         )}

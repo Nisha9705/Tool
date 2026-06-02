@@ -44,11 +44,11 @@ export default function LiveCaptureScreen() {
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, padding: '16px 20px', gap: 16 }}>
         {/* Camera viewport */}
-        <div style={{ position: 'relative', width: '100%', maxWidth: 360, aspectRatio: '3/4', borderRadius: 20, overflow: 'hidden', background: '#0D0E1A', border: '2px solid rgba(108,99,255,0.4)' }}>
+        <div style={{ position: 'relative', width: '100%', maxWidth: 360, aspectRatio: '3/4', borderRadius: 20, overflow: 'hidden', background: '#FFFBF7', border: '2px solid rgba(244, 63, 94,0.4)' }}>
           {stream ? (
             <video ref={videoRef} autoPlay playsInline muted style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scaleX(-1)' }} />
           ) : (
-            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 12, color: '#5A6080' }}>
+            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 12, color: '#6B554F' }}>
               <div style={{ fontSize: 60 }}>📷</div>
               <div style={{ fontSize: 14, textAlign: 'center', padding: '0 20px' }}>
                 {error || 'Initializing camera...'}
@@ -59,7 +59,7 @@ export default function LiveCaptureScreen() {
           {/* Face overlay */}
           <div style={{
             position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
-            width: 180, height: 220, border: '2px solid rgba(108,99,255,0.6)', borderRadius: '50% 50% 45% 45%',
+            width: 180, height: 220, border: '2px solid rgba(244, 63, 94,0.6)', borderRadius: '50% 50% 45% 45%',
             pointerEvents: 'none',
           }} />
 
@@ -67,7 +67,7 @@ export default function LiveCaptureScreen() {
           {countdown !== null && (
             <div style={{
               position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
-              background: 'rgba(0,0,0,0.5)', fontSize: 96, fontWeight: 900, color: '#6C63FF',
+              background: 'rgba(0,0,0,0.5)', fontSize: 96, fontWeight: 900, color: '#F43F5E',
             }}>{countdown}</div>
           )}
 
@@ -76,22 +76,22 @@ export default function LiveCaptureScreen() {
             <div key={c} style={{
               position: 'absolute', width: 24, height: 24,
               ...(c[0]==='t' ? {top:8}:{bottom:8}), ...(c[1]==='l' ? {left:8}:{right:8}),
-              border: '3px solid #43E8D8', borderRadius: 2,
-              borderRight: c[1]==='l' ? 'none' : '3px solid #43E8D8',
-              borderLeft: c[1]==='r' ? 'none' : '3px solid #43E8D8',
-              borderBottom: c[0]==='t' ? 'none' : '3px solid #43E8D8',
-              borderTop: c[0]==='b' ? 'none' : '3px solid #43E8D8',
+              border: '3px solid #F59E0B', borderRadius: 2,
+              borderRight: c[1]==='l' ? 'none' : '3px solid #F59E0B',
+              borderLeft: c[1]==='r' ? 'none' : '3px solid #F59E0B',
+              borderBottom: c[0]==='t' ? 'none' : '3px solid #F59E0B',
+              borderTop: c[0]==='b' ? 'none' : '3px solid #F59E0B',
             }} />
           ))}
         </div>
 
-        <p style={{ color: '#9BA3C7', fontSize: 13, textAlign: 'center' }}>
+        <p style={{ color: '#9E857E', fontSize: 13, textAlign: 'center' }}>
           Position the child's face in the oval frame. Ensure good lighting.
         </p>
 
         <button className="btn btn-primary btn-full btn-lg"
           onClick={capturePhoto} disabled={capturing}
-          style={{ background: capturing ? '#2D2D4E' : undefined }}>
+          style={{ background: capturing ? '#E3D3C4' : undefined }}>
           {capturing ? `📸 Capturing in ${countdown}...` : '📸 Take Photo'}
         </button>
 

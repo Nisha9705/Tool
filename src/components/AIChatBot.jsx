@@ -65,7 +65,7 @@ export default function AIChatBot() {
                 <div style={{ color: '#34D399', fontSize: 12 }}>Online</div>
               </div>
             </div>
-            <button onClick={() => setOpen(false)} style={{ background: 'none', border: 'none', color: '#9BA3C7', fontSize: 20, cursor: 'pointer' }}>✕</button>
+            <button onClick={() => setOpen(false)} style={{ background: 'none', border: 'none', color: '#9E857E', fontSize: 20, cursor: 'pointer' }}>✕</button>
           </div>
 
           <div className="chatbot-messages">

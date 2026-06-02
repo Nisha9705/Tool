@@ -88,8 +88,8 @@ export default function QuestionScreen() {
         {/* Progress */}
         <div style={{ marginBottom: 24 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-            <span style={{ color: '#9BA3C7', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Progress</span>
-            <span style={{ color: '#6C63FF', fontSize: 12, fontWeight: 700 }}>{stepNum}/3</span>
+            <span style={{ color: '#9E857E', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Progress</span>
+            <span style={{ color: '#F43F5E', fontSize: 12, fontWeight: 700 }}>{stepNum}/3</span>
           </div>
           <div className="progress-bar-wrap">
             <div className="progress-bar-fill" style={{ width: `${progress}%` }} />
@@ -99,7 +99,7 @@ export default function QuestionScreen() {
             {QUESTIONS.map(qq => (
               <div key={qq.step} style={{
                 width: 8, height: 8, borderRadius: '50%',
-                background: qq.step <= stepNum ? '#6C63FF' : '#1E2035',
+                background: qq.step <= stepNum ? '#F43F5E' : '#FAF2EC',
                 transition: 'all 0.3s',
               }} />
             ))}
@@ -110,7 +110,7 @@ export default function QuestionScreen() {
         <div className="card" style={{ textAlign: 'center', padding: '28px 20px', marginBottom: 20 }}>
           <div style={{ fontSize: 52, marginBottom: 12 }} className="float">{q.icon}</div>
           <span className="badge badge-primary" style={{ marginBottom: 14 }}>{q.title}</span>
-          <h2 style={{ fontSize: 19, fontWeight: 700, lineHeight: 1.5, color: '#F0F2FF' }}>{q.question}</h2>
+          <h2 style={{ fontSize: 19, fontWeight: 700, lineHeight: 1.5, color: '#FAF2EC' }}>{q.question}</h2>
         </div>
 
         {/* Options */}
@@ -119,17 +119,17 @@ export default function QuestionScreen() {
             <button key={opt.value} onClick={() => choose(opt.value)}
               style={{
                 display: 'flex', alignItems: 'center', gap: 14, padding: '14px 18px',
-                background: selected === opt.value ? 'rgba(108,99,255,0.2)' : '#161828',
-                border: selected === opt.value ? '2px solid #6C63FF' : '1px solid rgba(108,99,255,0.2)',
+                background: selected === opt.value ? 'rgba(244, 63, 94,0.2)' : '#f1e2d6',
+                border: selected === opt.value ? '2px solid #F43F5E' : '1px solid rgba(244, 63, 94,0.2)',
                 borderRadius: 14, cursor: 'pointer', transition: 'all 0.2s', textAlign: 'left', fontFamily: 'inherit',
                 transform: selected === opt.value ? 'scale(1.02)' : 'scale(1)',
               }}>
               <span style={{ fontSize: 28 }}>{opt.emoji}</span>
               <div style={{ flex: 1 }}>
-                <div style={{ color: '#F0F2FF', fontWeight: 600, fontSize: 15 }}>{opt.label}</div>
-                <div style={{ color: '#5A6080', fontSize: 12, marginTop: 2 }}>Level {opt.value}</div>
+                <div style={{ color: '#FAF2EC', fontWeight: 600, fontSize: 15 }}>{opt.label}</div>
+                <div style={{ color: '#6B554F', fontSize: 12, marginTop: 2 }}>Level {opt.value}</div>
               </div>
-              {selected === opt.value && <span style={{ color: '#6C63FF', fontSize: 22 }}>✓</span>}
+              {selected === opt.value && <span style={{ color: '#F43F5E', fontSize: 22 }}>✓</span>}
             </button>
           ))}
         </div>

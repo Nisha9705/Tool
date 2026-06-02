@@ -25,7 +25,7 @@ export default function ExportReportScreen() {
       // Generate printable HTML and open print dialog
       const html = `
         <html><head><title>PediPredict AI Report</title>
-        <style>body{font-family:sans-serif;padding:30px;color:#222}h1{color:#6C63FF}table{width:100%;border-collapse:collapse;margin:16px 0}td,th{border:1px solid #ddd;padding:8px;text-align:left}.risk{color:${riskColor};font-weight:bold}</style></head>
+        <style>body{font-family:sans-serif;padding:30px;color:#222}h1{color:#F43F5E}table{width:100%;border-collapse:collapse;margin:16px 0}td,th{border:1px solid #ddd;padding:8px;text-align:left}.risk{color:${riskColor};font-weight:bold}</style></head>
         <body>
           <h1>🦷 PediPredict AI – Clinical Report</h1>
           <p><strong>Patient:</strong> ${patient?.name} | <strong>Age:</strong> ${patient?.age} | <strong>Date:</strong> ${a.date}</p>
@@ -54,7 +54,7 @@ export default function ExportReportScreen() {
         <button className="back-btn" onClick={() => navigate(`/history/${id}`)} style={{ marginBottom: 20 }}>← Back</button>
 
         <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 6, textAlign: 'center' }}>Export Report</h1>
-        <p style={{ color: '#9BA3C7', fontSize: 14, textAlign: 'center', marginBottom: 28 }}>Choose how you'd like to export this assessment report</p>
+        <p style={{ color: '#9E857E', fontSize: 14, textAlign: 'center', marginBottom: 28 }}>Choose how you'd like to export this assessment report</p>
 
         {!done ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -68,8 +68,8 @@ export default function ExportReportScreen() {
                 style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '16px 18px', border: 'none', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left', width: '100%', transition: 'all 0.2s' }}>
                 <span style={{ fontSize: 34 }}>{exporting ? '⏳' : opt.icon}</span>
                 <div>
-                  <div style={{ fontWeight: 700, color: '#F0F2FF' }}>{opt.label}</div>
-                  <div style={{ color: '#9BA3C7', fontSize: 13 }}>{opt.sub}</div>
+                  <div style={{ fontWeight: 700, color: '#FAF2EC' }}>{opt.label}</div>
+                  <div style={{ color: '#9E857E', fontSize: 13 }}>{opt.sub}</div>
                 </div>
               </button>
             ))}
@@ -78,7 +78,7 @@ export default function ExportReportScreen() {
           <div className="card" style={{ textAlign: 'center', padding: 32 }}>
             <div style={{ fontSize: 60, marginBottom: 12 }}>✅</div>
             <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 6 }}>Export Successful!</div>
-            <p style={{ color: '#9BA3C7', fontSize: 14 }}>Your report has been exported.</p>
+            <p style={{ color: '#9E857E', fontSize: 14 }}>Your report has been exported.</p>
             <button className="btn btn-primary" style={{ marginTop: 16 }} onClick={() => navigate('/history')}>Back to History</button>
           </div>
         )}

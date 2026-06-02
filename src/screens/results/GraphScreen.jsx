@@ -3,8 +3,8 @@ import { useApp } from '../../context/AppContext';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis, Legend } from 'recharts';
 
 const CustomTooltip = ({ active, payload, label }) => active && payload ? (
-  <div style={{ background: '#1E2035', border: '1px solid rgba(108,99,255,0.3)', borderRadius: 8, padding: '8px 12px', fontSize: 12 }}>
-    <div style={{ color: '#F0F2FF', fontWeight: 700 }}>{label}</div>
+  <div style={{ background: '#FAF2EC', border: '1px solid rgba(244, 63, 94,0.3)', borderRadius: 8, padding: '8px 12px', fontSize: 12 }}>
+    <div style={{ color: '#FAF2EC', fontWeight: 700 }}>{label}</div>
     {payload.map(p => <div key={p.dataKey} style={{ color: p.color }}>{p.name}: {p.value}%</div>)}
   </div>
 ) : null;
@@ -18,7 +18,7 @@ export default function GraphScreen() {
   if (!assessments.length) return (
     <div className="screen">
       <div className="topbar"><button className="back-btn" onClick={() => navigate(`/patients/${id}`)}>← Back</button><span className="topbar-title">Charts</span><div /></div>
-      <div className="screen-centered"><div style={{color:'#9BA3C7'}}>No assessment data to chart.</div></div>
+      <div className="screen-centered"><div style={{color:'#9E857E'}}>No assessment data to chart.</div></div>
     </div>
   );
 
@@ -51,9 +51,9 @@ export default function GraphScreen() {
           <div style={{ fontWeight: 700, marginBottom: 14, paddingLeft: 6 }}>📊 Anxiety by Question</div>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={barData} margin={{ top: 5, right: 10, bottom: 5, left: -20 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(108,99,255,0.1)" />
-              <XAxis dataKey="name" tick={{ fill: '#9BA3C7', fontSize: 11 }} />
-              <YAxis tick={{ fill: '#9BA3C7', fontSize: 11 }} domain={[0, 100]} />
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(244, 63, 94,0.1)" />
+              <XAxis dataKey="name" tick={{ fill: '#9E857E', fontSize: 11 }} />
+              <YAxis tick={{ fill: '#9E857E', fontSize: 11 }} domain={[0, 100]} />
               <Tooltip content={<CustomTooltip />} />
               <Bar dataKey="score" name="Score" radius={[4, 4, 0, 0]}>
                 {barData.map((entry, i) => (
@@ -69,9 +69,9 @@ export default function GraphScreen() {
           <div style={{ fontWeight: 700, marginBottom: 14, paddingLeft: 6 }}>🕸️ Anxiety Radar</div>
           <ResponsiveContainer width="100%" height={220}>
             <RadarChart data={radarData}>
-              <PolarGrid stroke="rgba(108,99,255,0.2)" />
-              <PolarAngleAxis dataKey="subject" tick={{ fill: '#9BA3C7', fontSize: 11 }} />
-              <Radar name="Anxiety" dataKey="value" stroke="#6C63FF" fill="#6C63FF" fillOpacity={0.3} />
+              <PolarGrid stroke="rgba(244, 63, 94,0.2)" />
+              <PolarAngleAxis dataKey="subject" tick={{ fill: '#9E857E', fontSize: 11 }} />
+              <Radar name="Anxiety" dataKey="value" stroke="#F43F5E" fill="#F43F5E" fillOpacity={0.3} />
             </RadarChart>
           </ResponsiveContainer>
         </div>
@@ -82,13 +82,13 @@ export default function GraphScreen() {
             <div style={{ fontWeight: 700, marginBottom: 14, paddingLeft: 6 }}>📈 Trend Over Time</div>
             <ResponsiveContainer width="100%" height={200}>
               <BarChart data={historyData} margin={{ top: 5, right: 10, bottom: 5, left: -20 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(108,99,255,0.1)" />
-                <XAxis dataKey="date" tick={{ fill: '#9BA3C7', fontSize: 11 }} />
-                <YAxis tick={{ fill: '#9BA3C7', fontSize: 11 }} domain={[0, 100]} />
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(244, 63, 94,0.1)" />
+                <XAxis dataKey="date" tick={{ fill: '#9E857E', fontSize: 11 }} />
+                <YAxis tick={{ fill: '#9E857E', fontSize: 11 }} domain={[0, 100]} />
                 <Tooltip content={<CustomTooltip />} />
-                <Legend wrapperStyle={{ color: '#9BA3C7', fontSize: 12 }} />
-                <Bar dataKey="anxiety" name="Anxiety %" fill="#6C63FF" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="cooperation" name="Cooperation %" fill="#43E8D8" radius={[4, 4, 0, 0]} />
+                <Legend wrapperStyle={{ color: '#9E857E', fontSize: 12 }} />
+                <Bar dataKey="anxiety" name="Anxiety %" fill="#F43F5E" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="cooperation" name="Cooperation %" fill="#F59E0B" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>

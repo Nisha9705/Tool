@@ -13,16 +13,16 @@ export default function FacialCaptureScreen() {
       </div>
 
       <div className="page-content fade-in" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
-        <p style={{ color: '#9BA3C7', textAlign: 'center', fontSize: 14 }}>
+        <p style={{ color: '#9E857E', textAlign: 'center', fontSize: 14 }}>
           Position the child's face within the frame below. Make sure lighting is good and the face is clearly visible.
         </p>
 
         {/* Face frame */}
         <div style={{
           width: 260, height: 320, position: 'relative',
-          border: '3px dashed #6C63FF', borderRadius: 24,
+          border: '3px dashed #F43F5E', borderRadius: 24,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          background: 'rgba(108,99,255,0.05)',
+          background: 'rgba(244, 63, 94,0.05)',
           overflow: 'hidden',
         }}>
           {/* Corner markers */}
@@ -30,7 +30,7 @@ export default function FacialCaptureScreen() {
             <div key={c} style={{
               position: 'absolute',
               width: 20, height: 20,
-              borderColor: '#43E8D8',
+              borderColor: '#F59E0B',
               borderStyle: 'solid',
               borderWidth: 0,
               ...(c.includes('top') ? { top: -2 } : { bottom: -2 }),
@@ -38,7 +38,7 @@ export default function FacialCaptureScreen() {
             }} />
           ))}
 
-          <div style={{ textAlign: 'center', color: '#5A6080' }}>
+          <div style={{ textAlign: 'center', color: '#6B554F' }}>
             <div style={{ fontSize: 64, marginBottom: 8 }}>😊</div>
             <div style={{ fontSize: 13 }}>Face frame</div>
           </div>
@@ -46,7 +46,7 @@ export default function FacialCaptureScreen() {
           {/* Scan line */}
           <div style={{
             position: 'absolute', left: 0, right: 0, height: 2,
-            background: 'linear-gradient(90deg, transparent, #6C63FF, transparent)',
+            background: 'linear-gradient(90deg, transparent, #F43F5E, transparent)',
             animation: 'scanLine 2s linear infinite',
           }} />
         </div>

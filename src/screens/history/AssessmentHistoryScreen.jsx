@@ -29,17 +29,17 @@ export default function AssessmentHistoryScreen() {
               style={{
                 padding: '6px 14px', borderRadius: 99, border: 'none', cursor: 'pointer', fontFamily: 'inherit',
                 fontWeight: 700, fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.5px',
-                background: filter === f ? '#6C63FF' : '#1E2035',
-                color: filter === f ? '#fff' : '#9BA3C7',
+                background: filter === f ? '#F43F5E' : '#FAF2EC',
+                color: filter === f ? '#fff' : '#9E857E',
                 transition: 'all 0.2s',
               }}>{f}</button>
           ))}
         </div>
 
-        <div style={{ color: '#5A6080', fontSize: 13, marginBottom: 10 }}>{filtered.length} records</div>
+        <div style={{ color: '#6B554F', fontSize: 13, marginBottom: 10 }}>{filtered.length} records</div>
 
         {filtered.length === 0 ? (
-          <div className="card" style={{ textAlign: 'center', padding: 40, color: '#5A6080' }}>
+          <div className="card" style={{ textAlign: 'center', padding: 40, color: '#6B554F' }}>
             <div style={{ fontSize: 50, marginBottom: 10 }}>📋</div>
             <div>No assessments found</div>
           </div>
@@ -53,8 +53,8 @@ export default function AssessmentHistoryScreen() {
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontWeight: 700 }}>{patient?.name || 'Unknown Patient'}</div>
-                  <div style={{ color: '#9BA3C7', fontSize: 13 }}>{a.date} · {a.cooperationLevel} Cooperation</div>
-                  <div style={{ color: '#5A6080', fontSize: 12 }}>Anxiety: {a.anxietyScore}% · Emotion: {a.emotion}</div>
+                  <div style={{ color: '#9E857E', fontSize: 13 }}>{a.date} · {a.cooperationLevel} Cooperation</div>
+                  <div style={{ color: '#6B554F', fontSize: 12 }}>Anxiety: {a.anxietyScore}% · Emotion: {a.emotion}</div>
                 </div>
                 <span className="badge" style={{ background: `${riskColor[a.riskLevel]}20`, color: riskColor[a.riskLevel] }}>{a.riskLevel}</span>
               </div>

@@ -21,7 +21,7 @@ export default function RoleSelectionScreen() {
             className="card"
             style={{
               display: 'flex', alignItems: 'center', gap: 18,
-              border: '2px solid #1A6FE8',
+              border: '2px solid #F43F5E',
               boxShadow: '0 0 20px rgba(26,111,232,0.15)',
             }}
           >
@@ -32,7 +32,7 @@ export default function RoleSelectionScreen() {
                 Manage patients, run assessments, view full analytics
               </div>
             </div>
-            <div style={{ marginLeft: 'auto', color: '#1A6FE8', fontSize: 22 }}>✓</div>
+            <div style={{ marginLeft: 'auto', color: '#F43F5E', fontSize: 22 }}>✓</div>
           </div>
         </div>
 

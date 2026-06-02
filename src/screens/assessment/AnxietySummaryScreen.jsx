@@ -47,26 +47,26 @@ export default function AnxietySummaryScreen() {
           <div style={{ fontSize: 56, marginBottom: 8 }}>{info.icon}</div>
           <div style={{
             width: 120, height: 120, borderRadius: '50%', margin: '0 auto 16px',
-            background: `conic-gradient(${info.color} ${score * 3.6}deg, #1E2035 0)`,
+            background: `conic-gradient(${info.color} ${score * 3.6}deg, #FAF2EC 0)`,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             position: 'relative',
           }}>
-            <div style={{ width: 90, height: 90, borderRadius: '50%', background: '#161828', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+            <div style={{ width: 90, height: 90, borderRadius: '50%', background: '#f1e2d6', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
               <div style={{ fontSize: 26, fontWeight: 900, color: info.color }}>{score}%</div>
-              <div style={{ fontSize: 10, color: '#5A6080', textTransform: 'uppercase' }}>Anxiety</div>
+              <div style={{ fontSize: 10, color: '#6B554F', textTransform: 'uppercase' }}>Anxiety</div>
             </div>
           </div>
           <div style={{ fontSize: 20, fontWeight: 800, color: info.color, marginBottom: 6 }}>{info.label}</div>
-          <p style={{ color: '#9BA3C7', fontSize: 14 }}>{info.desc}</p>
+          <p style={{ color: '#9E857E', fontSize: 14 }}>{info.desc}</p>
         </div>
 
         {/* Per-question breakdown */}
-        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9BA3C7', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Question Breakdown</div>
+        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Question Breakdown</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
           {answers.map((a, i) => (
             <div key={i} className="card" style={{ padding: '12px 16px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-                <span style={{ color: '#9BA3C7', fontSize: 13, fontWeight: 600 }}>{qLabels[i]}</span>
+                <span style={{ color: '#9E857E', fontSize: 13, fontWeight: 600 }}>{qLabels[i]}</span>
                 <span style={{ fontWeight: 800, color: a <= 2 ? '#34D399' : a <= 3 ? '#FBBF24' : '#F87171' }}>Level {a}/5</span>
               </div>
               <div className="progress-bar-wrap">

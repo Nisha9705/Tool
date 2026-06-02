@@ -26,7 +26,7 @@ export default function BottomNav({ active }) {
               bottom: -2,
               width: 20,
               height: 3,
-              background: '#6C63FF',
+              background: '#F43F5E',
               borderRadius: 99,
             }} />
           )}

@@ -86,17 +86,17 @@ export default function ProcessingScreen() {
         <div style={{ fontSize: 80 }} className="pulse">🤖</div>
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 6 }}>AI Processing</h1>
-          <p style={{ color: '#9BA3C7', fontSize: 14 }}>Analyzing all data with our AI model...</p>
+          <p style={{ color: '#9E857E', fontSize: 14 }}>Analyzing all data with our AI model...</p>
         </div>
 
         {/* Progress ring */}
         <div style={{
           width: 140, height: 140, borderRadius: '50%',
-          background: `conic-gradient(#6C63FF ${progress * 3.6}deg, #1E2035 0)`,
+          background: `conic-gradient(#F43F5E ${progress * 3.6}deg, #FAF2EC 0)`,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
-          <div style={{ width: 108, height: 108, borderRadius: '50%', background: '#0D0E1A', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-            <div style={{ fontSize: 28, fontWeight: 900, color: '#6C63FF' }}>{progress}%</div>
+          <div style={{ width: 108, height: 108, borderRadius: '50%', background: '#FFFBF7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+            <div style={{ fontSize: 28, fontWeight: 900, color: '#F43F5E' }}>{progress}%</div>
           </div>
         </div>
 
@@ -105,12 +105,12 @@ export default function ProcessingScreen() {
           {stages.map((s, i) => (
             <div key={i} style={{
               display: 'flex', alignItems: 'center', gap: 12, padding: '10px 14px',
-              background: i < stage ? 'rgba(52,211,153,0.08)' : i === stage ? 'rgba(108,99,255,0.12)' : 'transparent',
+              background: i < stage ? 'rgba(52,211,153,0.08)' : i === stage ? 'rgba(244, 63, 94,0.12)' : 'transparent',
               borderRadius: 10, transition: 'all 0.4s',
-              border: i === stage ? '1px solid rgba(108,99,255,0.3)' : '1px solid transparent',
+              border: i === stage ? '1px solid rgba(244, 63, 94,0.3)' : '1px solid transparent',
             }}>
               <span style={{ fontSize: 20 }}>{i < stage ? '✅' : i === stage ? <span className="spinner" style={{width:18,height:18,borderWidth:2,display:'inline-block'}} /> : s.icon}</span>
-              <span style={{ color: i < stage ? '#34D399' : i === stage ? '#F0F2FF' : '#5A6080', fontSize: 14, fontWeight: i === stage ? 700 : 500 }}>{s.label}</span>
+              <span style={{ color: i < stage ? '#34D399' : i === stage ? '#FAF2EC' : '#6B554F', fontSize: 14, fontWeight: i === stage ? 700 : 500 }}>{s.label}</span>
             </div>
           ))}
         </div>

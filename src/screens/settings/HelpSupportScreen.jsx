@@ -28,27 +28,27 @@ export default function HelpSupportScreen() {
         <div style={{ textAlign: 'center', padding: '20px 0 28px' }}>
           <div style={{ fontSize: 56 }}>🛟</div>
           <h1 style={{ fontSize: 22, fontWeight: 800, marginTop: 10 }}>How can we help?</h1>
-          <p style={{ color: '#9BA3C7', fontSize: 14, marginTop: 6 }}>Find answers to common questions below</p>
+          <p style={{ color: '#9E857E', fontSize: 14, marginTop: 6 }}>Find answers to common questions below</p>
         </div>
 
-        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9BA3C7', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>FAQs</div>
+        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>FAQs</div>
 
         {FAQS.map((faq, i) => (
           <div key={i} className="card" style={{ marginBottom: 10, padding: 0, overflow: 'hidden' }}>
             <button onClick={() => setOpen(open === i ? null : i)}
               style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, padding: '14px 18px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left' }}>
-              <span style={{ color: '#6C63FF', fontSize: 16 }}>{open === i ? '▼' : '▶'}</span>
-              <span style={{ flex: 1, fontWeight: 600, fontSize: 14, color: '#F0F2FF' }}>{faq.q}</span>
+              <span style={{ color: '#F43F5E', fontSize: 16 }}>{open === i ? '▼' : '▶'}</span>
+              <span style={{ flex: 1, fontWeight: 600, fontSize: 14, color: '#FAF2EC' }}>{faq.q}</span>
             </button>
             {open === i && (
-              <div style={{ padding: '0 18px 14px 46px', color: '#9BA3C7', fontSize: 14, lineHeight: 1.7 }}>{faq.a}</div>
+              <div style={{ padding: '0 18px 14px 46px', color: '#9E857E', fontSize: 14, lineHeight: 1.7 }}>{faq.a}</div>
             )}
           </div>
         ))}
 
         <div className="divider" style={{ margin: '24px 0' }} />
 
-        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9BA3C7', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Contact Support</div>
+        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Contact Support</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {[
             { icon: '📧', label: 'Email Support', sub: 'support@pedipredict.ai', action: () => showToast('Opening email client...') },
@@ -59,10 +59,10 @@ export default function HelpSupportScreen() {
               style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 16px', border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%', textAlign: 'left' }}>
               <span style={{ fontSize: 28 }}>{c.icon}</span>
               <div>
-                <div style={{ fontWeight: 700, color: '#F0F2FF' }}>{c.label}</div>
-                <div style={{ color: '#9BA3C7', fontSize: 13 }}>{c.sub}</div>
+                <div style={{ fontWeight: 700, color: '#FAF2EC' }}>{c.label}</div>
+                <div style={{ color: '#9E857E', fontSize: 13 }}>{c.sub}</div>
               </div>
-              <span style={{ marginLeft: 'auto', color: '#5A6080' }}>›</span>
+              <span style={{ marginLeft: 'auto', color: '#6B554F' }}>›</span>
             </button>
           ))}
         </div>

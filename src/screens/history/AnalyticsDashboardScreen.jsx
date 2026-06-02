@@ -4,7 +4,7 @@ import BottomNav from '../../components/BottomNav';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
 const CustomTooltip = ({ active, payload }) => active && payload?.length ? (
-  <div style={{ background: '#1E2035', border: '1px solid rgba(108,99,255,0.3)', borderRadius: 8, padding: '8px 12px', fontSize: 12 }}>
+  <div style={{ background: '#FAF2EC', border: '1px solid rgba(244, 63, 94,0.3)', borderRadius: 8, padding: '8px 12px', fontSize: 12 }}>
     {payload.map(p => <div key={p.name} style={{ color: p.fill || p.color }}>{p.name}: {p.value}</div>)}
   </div>
 ) : null;
@@ -49,8 +49,8 @@ export default function AnalyticsDashboardScreen() {
         {/* Top stats */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
           {[
-            { label: 'Total Patients', value: patients.length, icon: '👧', color: '#6C63FF' },
-            { label: 'Total Assessments', value: assessments.length, icon: '📋', color: '#43E8D8' },
+            { label: 'Total Patients', value: patients.length, icon: '👧', color: '#F43F5E' },
+            { label: 'Total Assessments', value: assessments.length, icon: '📋', color: '#F59E0B' },
             { label: 'Avg Anxiety', value: `${avgAnxiety}%`, icon: '🧠', color: '#FF6584' },
             { label: 'High Risk Cases', value: riskCounts.High, icon: '⚠️', color: '#F87171' },
           ].map(s => (
@@ -63,7 +63,7 @@ export default function AnalyticsDashboardScreen() {
         </div>
 
         {assessments.length === 0 ? (
-          <div className="card" style={{ textAlign: 'center', padding: 40, color: '#5A6080' }}>
+          <div className="card" style={{ textAlign: 'center', padding: 40, color: '#6B554F' }}>
             <div style={{ fontSize: 50, marginBottom: 10 }}>📊</div>
             <div>No assessment data yet. Complete assessments to see analytics.</div>
           </div>
@@ -87,9 +87,9 @@ export default function AnalyticsDashboardScreen() {
               <div style={{ fontWeight: 700, marginBottom: 14, paddingLeft: 6 }}>📊 Cooperation Levels</div>
               <ResponsiveContainer width="100%" height={180}>
                 <BarChart data={coopData} margin={{ top: 5, right: 10, bottom: 5, left: -20 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(108,99,255,0.1)" />
-                  <XAxis dataKey="name" tick={{ fill: '#9BA3C7', fontSize: 12 }} />
-                  <YAxis tick={{ fill: '#9BA3C7', fontSize: 12 }} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(244, 63, 94,0.1)" />
+                  <XAxis dataKey="name" tick={{ fill: '#9E857E', fontSize: 12 }} />
+                  <YAxis tick={{ fill: '#9E857E', fontSize: 12 }} />
                   <Tooltip content={<CustomTooltip />} />
                   <Bar dataKey="value" name="Count" radius={[6, 6, 0, 0]}>
                     {coopData.map((e, i) => <Cell key={i} fill={e.fill} />)}
@@ -99,7 +99,7 @@ export default function AnalyticsDashboardScreen() {
             </div>
 
             {/* Recent assessments list */}
-            <div style={{ fontWeight: 700, marginBottom: 10, color: '#9BA3C7', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Recent Assessments</div>
+            <div style={{ fontWeight: 700, marginBottom: 10, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Recent Assessments</div>
             {assessments.slice(0, 4).map(a => {
               const rc = { Low: '#34D399', Medium: '#FBBF24', High: '#F87171' }[a.riskLevel];
               return (
@@ -107,7 +107,7 @@ export default function AnalyticsDashboardScreen() {
                   <div style={{ fontSize: 22 }}>{a.riskLevel === 'Low' ? '✅' : a.riskLevel === 'High' ? '⚠️' : '🟡'}</div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 700 }}>{a.cooperationLevel} Cooperation</div>
-                    <div style={{ color: '#9BA3C7', fontSize: 13 }}>{a.date} · Anxiety: {a.anxietyScore}%</div>
+                    <div style={{ color: '#9E857E', fontSize: 13 }}>{a.date} · Anxiety: {a.anxietyScore}%</div>
                   </div>
                   <span style={{ color: rc, fontWeight: 700, fontSize: 13 }}>{a.riskLevel}</span>
                 </div>

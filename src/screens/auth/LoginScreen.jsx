@@ -34,14 +34,14 @@ export default function LoginScreen() {
         <div style={{ marginBottom: 28 }}>
           <div style={{ fontSize: 36, marginBottom: 8 }}>👋</div>
           <h1 style={{ fontSize: 26, fontWeight: 800, marginBottom: 6 }}>Welcome Back</h1>
-          <p style={{ color: '#9BA3C7', fontSize: 14 }}>Sign in to your PediPredict AI account</p>
+          <p style={{ color: '#9E857E', fontSize: 14 }}>Sign in to your PediPredict AI account</p>
         </div>
 
         {/* Demo credentials hint */}
-        <div className="card" style={{ marginBottom: 20, padding: '12px 16px', background: 'rgba(108,99,255,0.1)', border: '1px solid rgba(108,99,255,0.3)' }}>
+        <div className="card" style={{ marginBottom: 20, padding: '12px 16px', background: 'rgba(244, 63, 94,0.1)', border: '1px solid rgba(244, 63, 94,0.3)' }}>
           <div style={{ fontSize: 12, color: '#A89BFF', fontWeight: 700, marginBottom: 6 }}>🧪 DEMO ACCOUNTS</div>
-          <div style={{ fontSize: 12, color: '#9BA3C7' }}>Dentist: <b style={{color:'#F0F2FF'}}>dentist@demo.com</b> / demo123</div>
-          <div style={{ fontSize: 12, color: '#9BA3C7' }}>Parent: <b style={{color:'#F0F2FF'}}>parent@demo.com</b> / demo123</div>
+          <div style={{ fontSize: 12, color: '#9E857E' }}>Dentist: <b style={{color:'#FAF2EC'}}>dentist@demo.com</b> / demo123</div>
+          <div style={{ fontSize: 12, color: '#9E857E' }}>Parent: <b style={{color:'#FAF2EC'}}>parent@demo.com</b> / demo123</div>
         </div>
 
         <form onSubmit={submit}>
@@ -72,7 +72,7 @@ export default function LoginScreen() {
 
         <div className="divider-text" style={{ margin: '24px 0' }}>or</div>
 
-        <div style={{ textAlign: 'center', color: '#9BA3C7', fontSize: 14 }}>
+        <div style={{ textAlign: 'center', color: '#9E857E', fontSize: 14 }}>
           Don't have an account?{' '}
           <Link to="/role" style={{ color: '#A89BFF', fontWeight: 700, textDecoration: 'none' }}>Create Account</Link>
         </div>
