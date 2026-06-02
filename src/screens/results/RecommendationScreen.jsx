@@ -45,10 +45,10 @@ export default function RecommendationScreen() {
       <div className="page-content fade-in" style={{ paddingBottom: 32 }}>
         <div className="card" style={{ marginBottom: 20, padding: '16px 18px', background: `${riskColor}10`, border: `1px solid ${riskColor}30` }}>
           <div style={{ fontSize: 13, color: riskColor, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 6 }}>AI Recommendation</div>
-          <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.7 }}>{a.recommendation}</p>
+          <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.7 }}>{a.recommendation}</p>
         </div>
 
-        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+        <div style={{ fontWeight: 700, marginBottom: 12, color: '#000000', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
           Behavior Strategies for {a.riskLevel} Risk
         </div>
 
@@ -58,7 +58,7 @@ export default function RecommendationScreen() {
               <div style={{ fontSize: 32, flexShrink: 0 }}>{s.icon}</div>
               <div>
                 <div style={{ fontWeight: 700, marginBottom: 4 }}>{s.title}</div>
-                <p style={{ color: '#9E857E', fontSize: 13, lineHeight: 1.6 }}>{s.desc}</p>
+                <p style={{ color: '#000000', fontSize: 13, lineHeight: 1.6 }}>{s.desc}</p>
               </div>
             </div>
           ))}

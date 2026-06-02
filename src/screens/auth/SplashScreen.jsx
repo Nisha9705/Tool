@@ -35,7 +35,7 @@ export default function SplashScreen() {
             <span style={{ color: '#FAF2EC' }}>Predict</span>
             <span style={{ color: '#F59E0B', fontSize: 20, fontWeight: 700 }}> AI</span>
           </div>
-          <div style={{ color: '#9E857E', fontSize: 14, fontWeight: 500, letterSpacing: '0.3px' }}>
+          <div style={{ color: '#000000', fontSize: 14, fontWeight: 500, letterSpacing: '0.3px' }}>
             Pediatric Cooperation Predictor
           </div>
         </div>
@@ -51,12 +51,12 @@ export default function SplashScreen() {
           ))}
         </div>
 
-        <div style={{ color: '#6B554F', fontSize: 12, marginTop: 8, letterSpacing: '2px', textTransform: 'uppercase' }}>
+        <div style={{ color: '#000000', fontSize: 12, marginTop: 8, letterSpacing: '2px', textTransform: 'uppercase' }}>
           Loading...
         </div>
       </div>
 
-      <div style={{ position: 'absolute', bottom: 32, color: '#6B554F', fontSize: 12 }}>
+      <div style={{ position: 'absolute', bottom: 32, color: '#000000', fontSize: 12 }}>
         v1.0 · AI Powered · Secure
       </div>
     </div>

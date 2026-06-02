@@ -36,7 +36,7 @@ export default function RegisterScreen() {
         <div style={{ marginBottom: 28 }}>
           <div style={{ fontSize: 36, marginBottom: 8 }}>✨</div>
           <h1 style={{ fontSize: 26, fontWeight: 800, marginBottom: 6 }}>Create Account</h1>
-          <p style={{ color: '#9E857E', fontSize: 14 }}>Join PediPredict AI</p>
+          <p style={{ color: '#000000', fontSize: 14 }}>Join PediPredict AI</p>
         </div>
 
         <form onSubmit={submit}>
@@ -72,7 +72,7 @@ export default function RegisterScreen() {
           </button>
         </form>
 
-        <div style={{ textAlign: 'center', color: '#9E857E', fontSize: 14, marginTop: 20 }}>
+        <div style={{ textAlign: 'center', color: '#000000', fontSize: 14, marginTop: 20 }}>
           Already have an account?{' '}
           <Link to="/login" style={{ color: '#A89BFF', fontWeight: 700, textDecoration: 'none' }}>Sign In</Link>
         </div>

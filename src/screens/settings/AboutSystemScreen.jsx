@@ -34,7 +34,7 @@ export default function AboutSystemScreen() {
           <h1 style={{ fontSize: 24, fontWeight: 900, marginBottom: 4 }}>
             <span style={{ color: '#F43F5E' }}>Pedi</span>Predict <span style={{ color: '#F59E0B', fontSize: 18 }}>AI</span>
           </h1>
-          <div style={{ color: '#9E857E', fontSize: 14, marginBottom: 12 }}>AI Pediatric Cooperation Predictor</div>
+          <div style={{ color: '#000000', fontSize: 14, marginBottom: 12 }}>AI Pediatric Cooperation Predictor</div>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 10 }}>
             <span className="badge badge-primary">v1.0.0</span>
             <span className="badge badge-success">Stable</span>
@@ -45,40 +45,40 @@ export default function AboutSystemScreen() {
         {/* Mission */}
         <div className="card" style={{ marginBottom: 16, padding: '16px 18px' }}>
           <div style={{ fontWeight: 700, marginBottom: 8 }}>🎯 Mission</div>
-          <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.7 }}>
+          <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.7 }}>
             PediPredict AI aims to revolutionize pediatric dental care by using artificial intelligence to predict child cooperation levels before treatment — reducing dental anxiety, improving outcomes, and enabling personalized care strategies.
           </p>
         </div>
 
         {/* Technology stack */}
-        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Technology Stack</div>
+        <div style={{ fontWeight: 700, marginBottom: 12, color: '#000000', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Technology Stack</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 20 }}>
           {tech.map(t => (
             <div key={t.label} className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px' }}>
               <span style={{ fontSize: 22 }}>{t.icon}</span>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 13 }}>{t.label}</div>
-                <div style={{ color: '#9E857E', fontSize: 12 }}>{t.value}</div>
+                <div style={{ color: '#000000', fontSize: 12 }}>{t.value}</div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Research team */}
-        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Research Team</div>
+        <div style={{ fontWeight: 700, marginBottom: 12, color: '#000000', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Research Team</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 20 }}>
           {team.map(m => (
             <div key={m.name} className="card" style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 16px' }}>
               <span style={{ fontSize: 30 }}>{m.icon}</span>
               <div>
                 <div style={{ fontWeight: 700 }}>{m.name}</div>
-                <div style={{ color: '#9E857E', fontSize: 13 }}>{m.role}</div>
+                <div style={{ color: '#000000', fontSize: 13 }}>{m.role}</div>
               </div>
             </div>
           ))}
         </div>
 
-        <div style={{ textAlign: 'center', color: '#6B554F', fontSize: 12, lineHeight: 2 }}>
+        <div style={{ textAlign: 'center', color: '#000000', fontSize: 12, lineHeight: 2 }}>
           <div>© 2026 PediPredict AI Research Group</div>
           <div>All rights reserved · Built with ❤️ for children's wellbeing</div>
           <div style={{ marginTop: 4 }}>This system is intended for clinical support only.</div>

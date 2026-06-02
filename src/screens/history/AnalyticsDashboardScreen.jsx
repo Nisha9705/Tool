@@ -63,7 +63,7 @@ export default function AnalyticsDashboardScreen() {
         </div>
 
         {assessments.length === 0 ? (
-          <div className="card" style={{ textAlign: 'center', padding: 40, color: '#6B554F' }}>
+          <div className="card" style={{ textAlign: 'center', padding: 40, color: '#000000' }}>
             <div style={{ fontSize: 50, marginBottom: 10 }}>📊</div>
             <div>No assessment data yet. Complete assessments to see analytics.</div>
           </div>
@@ -88,8 +88,8 @@ export default function AnalyticsDashboardScreen() {
               <ResponsiveContainer width="100%" height={180}>
                 <BarChart data={coopData} margin={{ top: 5, right: 10, bottom: 5, left: -20 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(244, 63, 94,0.1)" />
-                  <XAxis dataKey="name" tick={{ fill: '#9E857E', fontSize: 12 }} />
-                  <YAxis tick={{ fill: '#9E857E', fontSize: 12 }} />
+                  <XAxis dataKey="name" tick={{ fill: '#000000', fontSize: 12 }} />
+                  <YAxis tick={{ fill: '#000000', fontSize: 12 }} />
                   <Tooltip content={<CustomTooltip />} />
                   <Bar dataKey="value" name="Count" radius={[6, 6, 0, 0]}>
                     {coopData.map((e, i) => <Cell key={i} fill={e.fill} />)}
@@ -99,7 +99,7 @@ export default function AnalyticsDashboardScreen() {
             </div>
 
             {/* Recent assessments list */}
-            <div style={{ fontWeight: 700, marginBottom: 10, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Recent Assessments</div>
+            <div style={{ fontWeight: 700, marginBottom: 10, color: '#000000', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Recent Assessments</div>
             {assessments.slice(0, 4).map(a => {
               const rc = { Low: '#34D399', Medium: '#FBBF24', High: '#F87171' }[a.riskLevel];
               return (
@@ -107,7 +107,7 @@ export default function AnalyticsDashboardScreen() {
                   <div style={{ fontSize: 22 }}>{a.riskLevel === 'Low' ? '✅' : a.riskLevel === 'High' ? '⚠️' : '🟡'}</div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 700 }}>{a.cooperationLevel} Cooperation</div>
-                    <div style={{ color: '#9E857E', fontSize: 13 }}>{a.date} · Anxiety: {a.anxietyScore}%</div>
+                    <div style={{ color: '#000000', fontSize: 13 }}>{a.date} · Anxiety: {a.anxietyScore}%</div>
                   </div>
                   <span style={{ color: rc, fontWeight: 700, fontSize: 13 }}>{a.riskLevel}</span>
                 </div>

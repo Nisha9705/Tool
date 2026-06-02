@@ -23,14 +23,14 @@ export default function BehaviourReportScreen() {
         <div className="card" style={{ marginBottom: 16, padding: '20px', textAlign: 'center' }}>
           <div style={{ fontSize: 52, marginBottom: 10 }}>🧠</div>
           <h2 style={{ fontSize: 20, fontWeight: 800, marginBottom: 8 }}>Behavioural Profile</h2>
-          <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.6 }}>
+          <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.6 }}>
             Based on the AI scan and mismatch analysis, here is the predicted behavioural profile for the patient.
           </p>
         </div>
 
         <div className="card" style={{ marginBottom: 16, padding: '16px' }}>
           <div style={{ fontWeight: 700, marginBottom: 8, color: '#A89BFF' }}>Observation</div>
-          <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.6 }}>
+          <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.6 }}>
             {mismatch 
               ? 'The patient is exhibiting masking behavior. While their self-reported anxiety is different from their facial expression, we anticipate hidden stress during the procedure.' 
               : 'The patient\'s expressed anxiety aligns with their facial cues. Their behavior is straightforward and predictable.'}
@@ -39,7 +39,7 @@ export default function BehaviourReportScreen() {
 
         <div className="card" style={{ marginBottom: 24, padding: '16px' }}>
           <div style={{ fontWeight: 700, marginBottom: 8, color: '#A89BFF' }}>Actionable Strategy</div>
-          <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.6 }}>
+          <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.6 }}>
             {mismatch
               ? 'Use frequent check-ins and the tell-show-do method to build trust and uncover hidden anxieties. Look for subtle non-verbal cues of discomfort.'
               : 'Maintain steady communication. The current anxiety level provides a reliable indicator for proceeding with the planned treatment.'}

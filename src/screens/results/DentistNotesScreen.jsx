@@ -39,7 +39,7 @@ export default function DentistNotesScreen() {
 
       <div className="page-content fade-in" style={{ overflowY: 'auto', flex: 1, paddingBottom: 32 }}>
         <div style={{ marginBottom: 16 }}>
-          <div style={{ fontSize: 13, color: '#9E857E', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 10 }}>Quick Templates</div>
+          <div style={{ fontSize: 13, color: '#000000', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 10 }}>Quick Templates</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             {templates.map(t => (
               <button key={t} onClick={() => setNotes(n => n ? n + '\n' + t : t)}
@@ -57,7 +57,7 @@ export default function DentistNotesScreen() {
             style={{ minHeight: 200 }} />
         </div>
 
-        <div style={{ color: '#6B554F', fontSize: 12, marginBottom: 20 }}>
+        <div style={{ color: '#000000', fontSize: 12, marginBottom: 20 }}>
           {notes.length} characters · Saved to patient record
         </div>
 

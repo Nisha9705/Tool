@@ -88,7 +88,7 @@ export default function QuestionScreen() {
         {/* Progress */}
         <div style={{ marginBottom: 24 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-            <span style={{ color: '#9E857E', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Progress</span>
+            <span style={{ color: '#000000', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Progress</span>
             <span style={{ color: '#F43F5E', fontSize: 12, fontWeight: 700 }}>{stepNum}/3</span>
           </div>
           <div className="progress-bar-wrap">
@@ -127,7 +127,7 @@ export default function QuestionScreen() {
               <span style={{ fontSize: 28 }}>{opt.emoji}</span>
               <div style={{ flex: 1 }}>
                 <div style={{ color: '#FAF2EC', fontWeight: 600, fontSize: 15 }}>{opt.label}</div>
-                <div style={{ color: '#6B554F', fontSize: 12, marginTop: 2 }}>Level {opt.value}</div>
+                <div style={{ color: '#000000', fontSize: 12, marginTop: 2 }}>Level {opt.value}</div>
               </div>
               {selected === opt.value && <span style={{ color: '#F43F5E', fontSize: 22 }}>✓</span>}
             </button>

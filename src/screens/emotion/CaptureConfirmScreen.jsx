@@ -13,7 +13,7 @@ export default function CaptureConfirmScreen() {
         <div style={{ fontSize: 80 }}>{emotion.emoji}</div>
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 8 }}>Capture Confirmed</h1>
-          <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.7 }}>
+          <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.7 }}>
             The facial emotion has been successfully detected as <strong style={{ color: emotion.color }}>{emotion.label}</strong>. Would you like to proceed with AI analysis or retake?
           </p>
         </div>
@@ -22,7 +22,7 @@ export default function CaptureConfirmScreen() {
           <div style={{ fontSize: 36 }}>✅</div>
           <div>
             <div style={{ fontWeight: 700 }}>Emotion Captured</div>
-            <div style={{ color: '#9E857E', fontSize: 13 }}>Ready for AI processing</div>
+            <div style={{ color: '#000000', fontSize: 13 }}>Ready for AI processing</div>
           </div>
         </div>
 

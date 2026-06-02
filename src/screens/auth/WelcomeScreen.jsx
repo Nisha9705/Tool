@@ -14,7 +14,7 @@ export default function WelcomeScreen() {
           <h1 style={{ fontSize: 30, fontWeight: 900, marginBottom: 10 }}>
             <span style={{ color: '#F43F5E' }}>AI</span> Pediatric<br/>Cooperation Predictor
           </h1>
-          <p style={{ color: '#9E857E', fontSize: 15, lineHeight: 1.7 }}>
+          <p style={{ color: '#000000', fontSize: 15, lineHeight: 1.7 }}>
             Predict child cooperation during dental visits using advanced AI-powered anxiety assessment and real-time facial emotion analysis.
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function WelcomeScreen() {
         <button className="btn btn-secondary btn-full btn-lg" onClick={() => navigate('/register')}>
           Create New Account
         </button>
-        <div style={{ textAlign: 'center', color: '#6B554F', fontSize: 12, marginTop: 8 }}>
+        <div style={{ textAlign: 'center', color: '#000000', fontSize: 12, marginTop: 8 }}>
           🔒 Your data is encrypted and secure
         </div>
       </div>

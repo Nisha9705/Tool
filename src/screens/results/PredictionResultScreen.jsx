@@ -28,16 +28,16 @@ export default function PredictionResultScreen() {
         {/* Big result card */}
         <div className="card" style={{ textAlign: 'center', padding: '36px 24px', marginBottom: 16, background: `linear-gradient(145deg, ${cfg.color}10, var(--bg-card))` }}>
           <div style={{ fontSize: 72, marginBottom: 10 }} className="float">{cfg.icon}</div>
-          <div style={{ fontSize: 13, color: '#9E857E', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 8 }}>Cooperation Prediction</div>
+          <div style={{ fontSize: 13, color: '#000000', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 8 }}>Cooperation Prediction</div>
           <div style={{ fontSize: 42, fontWeight: 900, color: cfg.color, marginBottom: 6 }}>{a.cooperationLevel}</div>
-          <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.6 }}>{cfg.desc}</p>
+          <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.6 }}>{cfg.desc}</p>
 
           {/* Cooperation bar */}
           <div style={{ marginTop: 20 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-              <span style={{ color: '#6B554F', fontSize: 12 }}>Low</span>
+              <span style={{ color: '#000000', fontSize: 12 }}>Low</span>
               <span style={{ color: cfg.color, fontSize: 12, fontWeight: 700 }}>Cooperation Level: {cfg.bar}%</span>
-              <span style={{ color: '#6B554F', fontSize: 12 }}>High</span>
+              <span style={{ color: '#000000', fontSize: 12 }}>High</span>
             </div>
             <div className="progress-bar-wrap" style={{ height: 12 }}>
               <div className="progress-bar-fill" style={{ width: `${cfg.bar}%`, background: cfg.color }} />
@@ -50,7 +50,7 @@ export default function PredictionResultScreen() {
           <div className="avatar">{patient?.name?.[0] || 'P'}</div>
           <div>
             <div style={{ fontWeight: 700 }}>{patient?.name}</div>
-            <div style={{ color: '#9E857E', fontSize: 13 }}>Assessment Date: {a.date}</div>
+            <div style={{ color: '#000000', fontSize: 13 }}>Assessment Date: {a.date}</div>
           </div>
           <span className="badge" style={{ marginLeft: 'auto', background: `${cfg.color}20`, color: cfg.color }}>{a.riskLevel} Risk</span>
         </div>

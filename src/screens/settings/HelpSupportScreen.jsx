@@ -28,10 +28,10 @@ export default function HelpSupportScreen() {
         <div style={{ textAlign: 'center', padding: '20px 0 28px' }}>
           <div style={{ fontSize: 56 }}>🛟</div>
           <h1 style={{ fontSize: 22, fontWeight: 800, marginTop: 10 }}>How can we help?</h1>
-          <p style={{ color: '#9E857E', fontSize: 14, marginTop: 6 }}>Find answers to common questions below</p>
+          <p style={{ color: '#000000', fontSize: 14, marginTop: 6 }}>Find answers to common questions below</p>
         </div>
 
-        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>FAQs</div>
+        <div style={{ fontWeight: 700, marginBottom: 12, color: '#000000', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>FAQs</div>
 
         {FAQS.map((faq, i) => (
           <div key={i} className="card" style={{ marginBottom: 10, padding: 0, overflow: 'hidden' }}>
@@ -41,14 +41,14 @@ export default function HelpSupportScreen() {
               <span style={{ flex: 1, fontWeight: 600, fontSize: 14, color: '#FAF2EC' }}>{faq.q}</span>
             </button>
             {open === i && (
-              <div style={{ padding: '0 18px 14px 46px', color: '#9E857E', fontSize: 14, lineHeight: 1.7 }}>{faq.a}</div>
+              <div style={{ padding: '0 18px 14px 46px', color: '#000000', fontSize: 14, lineHeight: 1.7 }}>{faq.a}</div>
             )}
           </div>
         ))}
 
         <div className="divider" style={{ margin: '24px 0' }} />
 
-        <div style={{ fontWeight: 700, marginBottom: 12, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Contact Support</div>
+        <div style={{ fontWeight: 700, marginBottom: 12, color: '#000000', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Contact Support</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {[
             { icon: '📧', label: 'Email Support', sub: 'support@pedipredict.ai', action: () => showToast('Opening email client...') },
@@ -60,9 +60,9 @@ export default function HelpSupportScreen() {
               <span style={{ fontSize: 28 }}>{c.icon}</span>
               <div>
                 <div style={{ fontWeight: 700, color: '#FAF2EC' }}>{c.label}</div>
-                <div style={{ color: '#9E857E', fontSize: 13 }}>{c.sub}</div>
+                <div style={{ color: '#000000', fontSize: 13 }}>{c.sub}</div>
               </div>
-              <span style={{ marginLeft: 'auto', color: '#6B554F' }}>›</span>
+              <span style={{ marginLeft: 'auto', color: '#000000' }}>›</span>
             </button>
           ))}
         </div>

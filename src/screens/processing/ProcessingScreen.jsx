@@ -86,7 +86,7 @@ export default function ProcessingScreen() {
         <div style={{ fontSize: 80 }} className="pulse">🤖</div>
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 6 }}>AI Processing</h1>
-          <p style={{ color: '#9E857E', fontSize: 14 }}>Analyzing all data with our AI model...</p>
+          <p style={{ color: '#000000', fontSize: 14 }}>Analyzing all data with our AI model...</p>
         </div>
 
         {/* Progress ring */}
@@ -110,7 +110,7 @@ export default function ProcessingScreen() {
               border: i === stage ? '1px solid rgba(244, 63, 94,0.3)' : '1px solid transparent',
             }}>
               <span style={{ fontSize: 20 }}>{i < stage ? '✅' : i === stage ? <span className="spinner" style={{width:18,height:18,borderWidth:2,display:'inline-block'}} /> : s.icon}</span>
-              <span style={{ color: i < stage ? '#34D399' : i === stage ? '#FAF2EC' : '#6B554F', fontSize: 14, fontWeight: i === stage ? 700 : 500 }}>{s.label}</span>
+              <span style={{ color: i < stage ? '#34D399' : i === stage ? '#FAF2EC' : '#000000', fontSize: 14, fontWeight: i === stage ? 700 : 500 }}>{s.label}</span>
             </div>
           ))}
         </div>

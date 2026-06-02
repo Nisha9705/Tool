@@ -32,7 +32,7 @@ export default function AIPredictionScreen() {
         <h1 style={{ fontSize: 24, fontWeight: 800, textAlign: 'center' }}>AI Prediction Engine</h1>
 
         <div style={{ width: '100%', background: '#f1e2d6', borderRadius: 16, overflow: 'hidden', padding: 16, fontFamily: 'monospace', fontSize: 12, color: '#F59E0B', lineHeight: 2 }}>
-          <div style={{ color: '#6B554F' }}>&gt; PediPredict AI v2.1</div>
+          <div style={{ color: '#000000' }}>&gt; PediPredict AI v2.1</div>
           {steps.slice(0, step).map((s, i) => (
             <div key={i} style={{ color: i === step - 1 ? '#FAF2EC' : '#34D399' }}>
               {i === step - 1 ? '⟳ ' : '✓ '}{s}
@@ -43,20 +43,20 @@ export default function AIPredictionScreen() {
 
         <div style={{ display: 'flex', gap: 12, width: '100%' }}>
           <div className="card" style={{ flex: 1, textAlign: 'center' }}>
-            <div style={{ fontSize: 11, color: '#6B554F', textTransform: 'uppercase' }}>Input Score</div>
+            <div style={{ fontSize: 11, color: '#000000', textTransform: 'uppercase' }}>Input Score</div>
             <div style={{ fontSize: 24, fontWeight: 800, color: '#F43F5E' }}>{a.anxietyScore}%</div>
           </div>
           <div className="card" style={{ flex: 1, textAlign: 'center' }}>
-            <div style={{ fontSize: 11, color: '#6B554F', textTransform: 'uppercase' }}>Emotion</div>
+            <div style={{ fontSize: 11, color: '#000000', textTransform: 'uppercase' }}>Emotion</div>
             <div style={{ fontSize: 18, fontWeight: 800, color: '#F59E0B' }}>{a.emotion}</div>
           </div>
           <div className="card" style={{ flex: 1, textAlign: 'center' }}>
-            <div style={{ fontSize: 11, color: '#6B554F', textTransform: 'uppercase' }}>Risk</div>
+            <div style={{ fontSize: 11, color: '#000000', textTransform: 'uppercase' }}>Risk</div>
             <div style={{ fontSize: 18, fontWeight: 800, color: a.riskLevel === 'Low' ? '#34D399' : a.riskLevel === 'High' ? '#F87171' : '#FBBF24' }}>{a.riskLevel}</div>
           </div>
         </div>
 
-        <div style={{ color: '#6B554F', fontSize: 12, textAlign: 'center' }}>
+        <div style={{ color: '#000000', fontSize: 12, textAlign: 'center' }}>
           Redirecting to results...
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function AssessmentStartScreen() {
         <div style={{ fontSize: 80 }} className="float">🧠</div>
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: 26, fontWeight: 800, marginBottom: 8 }}>Anxiety Assessment</h1>
-          <p style={{ color: '#9E857E', fontSize: 15, lineHeight: 1.7 }}>
+          <p style={{ color: '#000000', fontSize: 15, lineHeight: 1.7 }}>
             This 5-question assessment measures the child's dental anxiety level using validated psychological methods.
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function AssessmentStartScreen() {
           ].map(f => (
             <div key={f.text} className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 16px' }}>
               <span style={{ fontSize: 22 }}>{f.icon}</span>
-              <span style={{ fontSize: 14, color: '#9E857E' }}>{f.text}</span>
+              <span style={{ fontSize: 14, color: '#000000' }}>{f.text}</span>
             </div>
           ))}
         </div>

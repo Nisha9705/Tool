@@ -48,7 +48,7 @@ export default function LiveCaptureScreen() {
           {stream ? (
             <video ref={videoRef} autoPlay playsInline muted style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scaleX(-1)' }} />
           ) : (
-            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 12, color: '#6B554F' }}>
+            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 12, color: '#000000' }}>
               <div style={{ fontSize: 60 }}>📷</div>
               <div style={{ fontSize: 14, textAlign: 'center', padding: '0 20px' }}>
                 {error || 'Initializing camera...'}
@@ -85,7 +85,7 @@ export default function LiveCaptureScreen() {
           ))}
         </div>
 
-        <p style={{ color: '#9E857E', fontSize: 13, textAlign: 'center' }}>
+        <p style={{ color: '#000000', fontSize: 13, textAlign: 'center' }}>
           Position the child's face in the oval frame. Ensure good lighting.
         </p>
 

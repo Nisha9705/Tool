@@ -13,7 +13,7 @@ export default function FacialCaptureScreen() {
       </div>
 
       <div className="page-content fade-in" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
-        <p style={{ color: '#9E857E', textAlign: 'center', fontSize: 14 }}>
+        <p style={{ color: '#000000', textAlign: 'center', fontSize: 14 }}>
           Position the child's face within the frame below. Make sure lighting is good and the face is clearly visible.
         </p>
 
@@ -38,7 +38,7 @@ export default function FacialCaptureScreen() {
             }} />
           ))}
 
-          <div style={{ textAlign: 'center', color: '#6B554F' }}>
+          <div style={{ textAlign: 'center', color: '#000000' }}>
             <div style={{ fontSize: 64, marginBottom: 8 }}>😊</div>
             <div style={{ fontSize: 13 }}>Face frame</div>
           </div>

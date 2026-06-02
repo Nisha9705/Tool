@@ -11,10 +11,10 @@ export default function DetailedReportScreen() {
   const patient = getPatient(id);
 
   if (!a || !patient) return (
-    <div className="screen-centered"><div style={{color:'#9E857E'}}>No report available.</div></div>
+    <div className="screen-centered"><div style={{color:'#000000'}}>No report available.</div></div>
   );
 
-  const riskColor = { Low: '#34D399', Medium: '#FBBF24', High: '#F87171' }[a.riskLevel] || '#9E857E';
+  const riskColor = { Low: '#34D399', Medium: '#FBBF24', High: '#F87171' }[a.riskLevel] || '#000000';
   const qLabels = ['Fear of Dentist', 'Reaction to Tools', 'Past Experience'];
 
   return (
@@ -32,8 +32,8 @@ export default function DetailedReportScreen() {
             <div className="avatar" style={{ width: 52, height: 52, fontSize: 22 }}>{patient.name[0]}</div>
             <div>
               <div style={{ fontWeight: 800, fontSize: 18 }}>{patient.name}</div>
-              <div style={{ color: '#9E857E', fontSize: 13 }}>{patient.age} yrs · {patient.gender}</div>
-              <div style={{ color: '#6B554F', fontSize: 12 }}>Report Date: {a.date}</div>
+              <div style={{ color: '#000000', fontSize: 13 }}>{patient.age} yrs · {patient.gender}</div>
+              <div style={{ color: '#000000', fontSize: 12 }}>Report Date: {a.date}</div>
             </div>
             <span className="badge" style={{ marginLeft: 'auto', background: `${riskColor}20`, color: riskColor }}>{a.riskLevel} Risk</span>
           </div>
@@ -50,7 +50,7 @@ export default function DetailedReportScreen() {
             <div key={m.label} className="card" style={{ textAlign: 'center', padding: '16px 12px' }}>
               <div style={{ fontSize: 24, marginBottom: 4 }}>{m.icon}</div>
               <div style={{ fontWeight: 800, fontSize: 18, color: m.color }}>{m.value}</div>
-              <div style={{ color: '#6B554F', fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.5px' }}>{m.label}</div>
+              <div style={{ color: '#000000', fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.5px' }}>{m.label}</div>
             </div>
           ))}
         </div>
@@ -58,12 +58,12 @@ export default function DetailedReportScreen() {
         {/* Q breakdown */}
         {a.answers?.length > 0 && (
           <>
-            <div style={{ fontWeight: 700, marginBottom: 10, color: '#9E857E', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Question Breakdown</div>
+            <div style={{ fontWeight: 700, marginBottom: 10, color: '#000000', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Question Breakdown</div>
             <div className="card" style={{ marginBottom: 16, padding: '16px 16px' }}>
               {a.answers.map((ans, i) => (
                 <div key={i} style={{ marginBottom: 10 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                    <span style={{ color: '#9E857E', fontSize: 13 }}>{qLabels[i]}</span>
+                    <span style={{ color: '#000000', fontSize: 13 }}>{qLabels[i]}</span>
                     <span style={{ fontWeight: 700, color: ans <= 2 ? '#34D399' : ans <= 3 ? '#FBBF24' : '#F87171', fontSize: 13 }}>Level {ans}/5</span>
                   </div>
                   <div className="progress-bar-wrap" style={{ height: 6 }}>
@@ -78,14 +78,14 @@ export default function DetailedReportScreen() {
         {/* Recommendation */}
         <div className="card" style={{ marginBottom: 16, padding: '16px 18px', background: 'rgba(244, 63, 94,0.08)', border: '1px solid rgba(244, 63, 94,0.2)' }}>
           <div style={{ fontWeight: 700, color: '#A89BFF', marginBottom: 8 }}>💡 AI Recommendation</div>
-          <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.7 }}>{a.recommendation}</p>
+          <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.7 }}>{a.recommendation}</p>
         </div>
 
         {/* Dentist notes */}
         {a.notes && (
           <div className="card" style={{ marginBottom: 16, padding: '16px 18px' }}>
             <div style={{ fontWeight: 700, marginBottom: 8 }}>📝 Dentist Notes</div>
-            <p style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.7 }}>{a.notes}</p>
+            <p style={{ color: '#000000', fontSize: 14, lineHeight: 1.7 }}>{a.notes}</p>
           </div>
         )}
 

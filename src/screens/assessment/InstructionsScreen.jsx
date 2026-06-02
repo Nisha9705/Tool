@@ -12,7 +12,7 @@ export default function InstructionsScreen() {
         <div style={{ textAlign: 'center', marginBottom: 28 }}>
           <div style={{ fontSize: 64, marginBottom: 12 }}>📝</div>
           <h1 style={{ fontSize: 24, fontWeight: 800 }}>Instructions</h1>
-          <p style={{ color: '#9E857E', fontSize: 14, marginTop: 8, lineHeight: 1.7 }}>
+          <p style={{ color: '#000000', fontSize: 14, marginTop: 8, lineHeight: 1.7 }}>
             Please explain the following to the child before starting:
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function InstructionsScreen() {
               }}>{step.n}</div>
               <div>
                 <span style={{ fontSize: 18, marginRight: 8 }}>{step.icon}</span>
-                <span style={{ color: '#9E857E', fontSize: 14, lineHeight: 1.6 }}>{step.text}</span>
+                <span style={{ color: '#000000', fontSize: 14, lineHeight: 1.6 }}>{step.text}</span>
               </div>
             </div>
           ))}
